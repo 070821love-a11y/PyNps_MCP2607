@@ -169,9 +169,9 @@ if data and company_name:
         """)   
 
 
-        fig, ax = plt.subpolots(1,2)
+        fig, ax = plt.subplots(1, 2)
 
-         p1 = ax[0].bar(x=["Average", "Your Company"], height=(comp_output.iloc[0, 0], info['월급여추정']), width=0.7)
+        p1 = ax[0].bar(x=["Average", "Your Company"], height=(comp_output.iloc[0, 0], info['월급여추정']), width=0.7)
         ax[0].bar_label(p1, fmt='%d')
         p1[0].set_color('black')
         p1[1].set_color('red')
@@ -186,10 +186,6 @@ if data and company_name:
         ax[0].tick_params(axis='both', which='major', labelsize=8, rotation=0)
         ax[0].tick_params(axis='both', which='minor', labelsize=6)
         ax[1].tick_params(axis='both', which='major', labelsize=8)
-        ax[1].tick_params(axis='both', which='minor', labelsize=6)
-
+        ax[1].tick_params(axis='both', which='minor', labelsize=6)        
 
         st.pyplot(fig)
-
-
-
