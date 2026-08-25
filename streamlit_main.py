@@ -113,7 +113,7 @@ file_path = r'https://www.dropbox.com/scl/fi/q05nabk8r0822dy8q1kew/_-_20251124.c
 
 
 @st.cache_resource #동일 함수 반복 호출되면, 매번 실행하지 않고, 마지막으로 실행된 결과로 리턴케 함
-def read_Pemsiondata():
+def read_Pensiondata():
     data = PensionData(file_path)
     return data
 
