@@ -131,9 +131,8 @@ if data and company_name:
     if len(output) > 0:
         st.subheader(output.iloc[0]['사업장명'])
 
-
-
- st.markdown(
+        info = data.company_info(company_name=company_name)
+        st.markdown(
             f"""
             - `{info['주소']}`
             - 업종코드명 `{info['업종코드명']}`
@@ -143,7 +142,8 @@ if data and company_name:
             """
         ) 
 
-  col1.text('월급여 추정')
+        col1, col2, col3 = st.columns(3)
+        col1.text('월급여 추정')
         col1.markdown(f"`{int(output.iloc[0]['월급여추정']):,}` 원")
 
         col2.text('연봉 추정')
@@ -151,5 +151,3 @@ if data and company_name:
 
         col3.text('가입자수 추정')
         col3.markdown(f"`{int(output.iloc[0]['가입자수']):,}` 명")
-
-
